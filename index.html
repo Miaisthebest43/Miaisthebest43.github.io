@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>🕵️ OSINT Bot – Ultimate Discord OSINT Tool</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================================
+    ANIMATED BACKGROUND
+    ============================================================ -->
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ============================================================
+    NAVIGATION
+    ============================================================ -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">🕵️</div>
+                <span>OSINT Bot</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#features">Features</a>
+                <a href="#commands">Commands</a>
+                <a href="#status">Status</a>
+                <a href="#disclaimer">Disclaimer</a>
+                <a href="https://discord.com/oauth2/authorize?client_id=1522763015177633963&permissions=8&scope=bot" class="btn-invite" target="_blank" rel="noopener">
+                    <i class="fas fa-plus"></i> Invite Bot
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+    HERO
+    ============================================================ -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-alt"></i> v2.0 • Ultimate OSINT
+                </div>
+                <h1>
+                    Your Ultimate<br>
+                    <span class="gradient-text">OSINT Bot</span>
+                </h1>
+                <p class="hero-subtitle">🔍 Powerful people search for Discord</p>
+                <p class="hero-description">
+                    Find anyone, check data breaches, analyze websites, and more — all from your Discord server.
+                    Built for legitimate research and educational purposes.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1522763015177633963&permissions=8&scope=bot" class="btn-primary" target="_blank" rel="noopener">
+                        <i class="fas fa-plus-circle"></i> Invite to Server
+                    </a>
+                    <a href="#commands" class="btn-secondary">
+                        <i class="fas fa-book"></i> View Commands
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Powerful Commands</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Free to Use</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">🟢</div>
+                        <div class="stat-label">24/7 Online</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="bot-mascot">🤖</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FEATURES
+    ============================================================ -->
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">⚡ Features</div>
+                <h2>Everything You Need</h2>
+                <p>Powerful OSINT tools at your fingertips, all accessible via simple Discord commands.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">🔍</div>
+                    <h3>People Search</h3>
+                    <p>Find anyone using Apollo.io & Google Knowledge Graph with real-time data.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📰</div>
+                    <h3>News & Alerts</h3>
+                    <p>Get the latest news and articles about any person or topic instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔐</div>
+                    <h3>Breach Check</h3>
+                    <p>Check if an email was exposed in a data breach with HIBP integration.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌐</div>
+                    <h3>Website Analysis</h3>
+                    <p>Extract metadata, titles, descriptions, and keywords from any website.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📸</div>
+                    <h3>Image Search</h3>
+                    <p>Reverse image search powered by Google Cloud Vision AI.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📍</div>
+                    <h3>IP Geolocation</h3>
+                    <p>Find location, ISP, and network info for any IP address.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🤖</div>
+                    <h3>AI Q&A</h3>
+                    <p>Ask questions about any person and get AI-powered answers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📂</div>
+                    <h3>Batch Search</h3>
+                    <p>Search multiple names at once or upload CSV/TXT files.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    COMMANDS
+    ============================================================ -->
+    <section id="commands" class="commands-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">📋 Commands</div>
+                <h2>Simple & Powerful</h2>
+                <p>All commands start with <code class="inline-code">!</code> — just type and go.</p>
+            </div>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <div class="cmd-icon">🔍</div>
+                    <code>!find &lt;name&gt;</code>
+                    <p>Search for a person</p>
+                </div>
+                <div class="command-card">
+                    <div class="cmd-icon">🏢</div>
+                    <code>!domain &lt;domain&gt;</code>
+                    <p>Find people at a company</p>
+                </div>
+                <div class="command-card">
+                    <div class="cmd-icon">📧</div>
+                    <code>!email &lt;email&gt;</code>
+                    <p>Lookup by email</p>
+                </div>
+                <div class="command-card">
+                    <div class="cmd-icon">📰</div>
+                    <code>!news &lt;query&gt;</code>
+                    <p>Latest news</p>
+                </div>
+                <div class="command-card">
+                    <div class="cmd-icon">🔐</div>
+                    <code>!breach &lt;email&gt;</code>
+                    <p>Check data breach</p>
+                </div>
+                <div class="command-card">
+                    <div class="cmd-icon">📍</div>
+                    <code>!ip &lt;address&gt;</code>
+                    <p>IP geolocation</p>
+                </div>
+                <div class="command-card">
+                    <div class="cmd-icon">📸</div>
+                    <code>!image [url]</code>
+                    <p>Reverse image search</p>
+                </div>
+                <div class="command-card">
+                    <div class="cmd-icon">🌐</div>
+                    <code>!website &lt;url&gt;</code>
+                    <p>Analyze website</p>
+                </div>
+                <div class="command-card">
+                    <div class="cmd-icon">🤖</div>
+                    <code>!ask &lt;person&gt; &lt;q&gt;</code>
+                    <p>AI-powered Q&A</p>
+                </div>
+                <div class="command-card">
+                    <div class="cmd-icon">📂</div>
+                    <code>!batch &lt;names&gt;</code>
+                    <p>Search multiple names</p>
+                </div>
+                <div class="command-card">
+                    <div class="cmd-icon">📤</div>
+                    <code>!upload</code>
+                    <p>Upload CSV/TXT file</p>
+                </div>
+                <div class="command-card">
+                    <div class="cmd-icon">❓</div>
+                    <code>!help</code>
+                    <p>Show all commands</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    STATUS
+    ============================================================ -->
+    <section id="status" class="status-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">📊 Status</div>
+                <h2>Bot Uptime & Health</h2>
+                <p>Real-time status of the OSINT Bot — always online and ready.</p>
+            </div>
+            <div class="status-grid">
+                <div class="status-card online">
+                    <div class="status-icon"><span class="status-dot"></span></div>
+                    <div class="status-value" id="bot-status">Online</div>
+                    <div class="status-label">Bot Status</div>
+                </div>
+                <div class="status-card">
+                    <div class="status-icon">⏱️</div>
+                    <div class="status-value" id="bot-uptime">Loading...</div>
+                    <div class="status-label">Uptime</div>
+                </div>
+                <div class="status-card">
+                    <div class="status-icon">🌍</div>
+                    <div class="status-value" id="bot-servers">Loading...</div>
+                    <div class="status-label">Servers</div>
+                </div>
+                <div class="status-card">
+                    <div class="status-icon">⚡</div>
+                    <div class="status-value" id="bot-commands">12</div>
+                    <div class="status-label">Commands</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    DISCLAIMER
+    ============================================================ -->
+    <section id="disclaimer" class="disclaimer-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">⚠️ Legal</div>
+                <h2>Terms of Use</h2>
+                <p>Please read this before using the bot — your safety and responsibility matter.</p>
+            </div>
+            <div class="disclaimer-box">
+                <div class="icon">⚖️</div>
+                <h3>⚠️ Disclaimer & Terms of Service</h3>
+                <p>
+                    By using this bot, you agree to the following:
+                </p>
+                <br>
+                <p>
+                    <span class="highlight">🔹 Educational & Legitimate Use Only</span><br>
+                    This bot is designed for <span class="highlight">educational</span> and <span class="highlight">legitimate research</span> purposes only.
+                </p>
+                <br>
+                <p>
+                    <span class="highlight">🚫 Prohibited Uses</span><br>
+                    You may NOT use this bot for stalking, harassment, doxxing, identity theft, fraud, or any illegal activity.
+                    Respect others' privacy at all times.
+                </p>
+                <br>
+                <p>
+                    <span class="highlight">📊 Data Accuracy</span><br>
+                    Data is sourced from public APIs and public records. Some data may be mocked for demonstration.
+                    <span class="highlight">Accuracy is NOT guaranteed</span> — always verify information independently.
+                </p>
+                <br>
+                <p>
+                    <span class="highlight">🛡️ No Warranty</span><br>
+                    This bot is provided <span class="highlight">"AS IS"</span> without any warranty. The developer is NOT responsible for:
+                </p>
+                <br>
+                <p class="muted-small">
+                    • How you use the information provided<br>
+                    • Any actions taken based on the data<br>
+                    • Misuse of the bot by any user<br>
+                    • Any damages or losses resulting from use
+                </p>
+                <br>
+                <p>
+                    <span class="highlight">👤 User Responsibility</span><br>
+                    You are <span class="highlight">SOLELY responsible</span> for your use of this bot and compliance with all applicable laws.
+                </p>
+                <br>
+                <p class="muted-small">
+                    By using this bot, you accept these terms. For full terms, type <code class="inline-code">!terms</code> in Discord.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <a href="#" class="logo footer-logo">
+                        <div class="logo-icon footer-logo-icon">🕵️</div>
+                        <span>OSINT Bot</span>
+                    </a>
+                    <p>Ultimate OSINT tool for Discord 🚀</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#features">Features</a>
+                    <a href="#commands">Commands</a>
+                    <a href="#status">Status</a>
+                    <a href="#disclaimer">Disclaimer</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 OSINT Bot. Built with ❤️ for the Discord community.
+                <br>
+                <span class="footer-note">
+                    Use <code class="inline-code inline-code-small">!terms</code> in Discord for full Terms of Service.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>

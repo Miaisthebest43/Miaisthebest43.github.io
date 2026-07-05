@@ -1,0 +1,23 @@
+{
+    "name": "osint-bot-website",
+    "version": "2.0.0",
+    "description": "Ultimate OSINT Bot – Official Website",
+    "main": "index.html",
+    "author": "OSINT Bot Team",
+    "license": "MIT",
+    "scripts": {
+        "start": "npx serve .",
+        "dev": "npx live-server ."
+    },
+    "keywords": [
+        "osint",
+        "discord-bot",
+        "people-search",
+        "breach-check",
+        "ip-geolocation"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Miaisthebest43/osint-bot-website.git"
+    }
+}
